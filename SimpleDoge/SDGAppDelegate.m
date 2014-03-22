@@ -8,16 +8,36 @@
 
 #import "SDGAppDelegate.h"
 
-#import "SDGViewController.h"
+#import "SDGConstants.h"
+#import "SDGPoolStatsViewController.h"
+#import "SDGUserStatsController.h"
 
 @implementation SDGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    [[UINavigationBar appearance] setTintColor:[SDGConstants tintColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:
+        @{NSForegroundColorAttributeName: [SDGConstants tintColor],
+          NSFontAttributeName: [UIFont boldSystemFontOfSize:22.0]
+    }];
+    
+    SDGPoolStatsViewController *vc1 = [[SDGPoolStatsViewController alloc] init];
+    UINavigationController *nc1 = [[UINavigationController alloc] initWithRootViewController:vc1];
+    nc1.tabBarItem.title = @"Pool Stats";
 
-    SDGViewController *vc = [[SDGViewController alloc] init];
-    self.window.rootViewController = vc;
+    SDGUserStatsController *vc2 = [[SDGUserStatsController alloc] init];
+    UINavigationController *nc2 = [[UINavigationController alloc] initWithRootViewController:vc2];
+    nc2.tabBarItem.title = @"User Stats";
+    
+    UITabBarController *tbc = [[UITabBarController alloc] init];
+    tbc.viewControllers = @[nc1, nc2];
+    
+    self.window.rootViewController = tbc;
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -1,18 +1,18 @@
 //
-//  SDGViewController.m
+//  SDGPoolStatsViewController.m
 //  SimpleDoge
 //
-//  Created by Adam McDonald on 3/16/14.
+//  Created by Adam McDonald on 3/21/14.
 //  Copyright (c) 2014 Adam McDonald. All rights reserved.
 //
 
-#import "SDGViewController.h"
+#import "SDGPoolStatsViewController.h"
 
-@interface SDGViewController ()
+@interface SDGPoolStatsViewController ()
 
 @end
 
-@implementation SDGViewController
+@implementation SDGPoolStatsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"Pool Stats";
 }
 
 - (void)didReceiveMemoryWarning

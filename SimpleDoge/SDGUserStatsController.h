@@ -1,5 +1,5 @@
 //
-//  SDGViewController.h
+//  SDGUserStatsController.h
 //  SimpleDoge
 //
 //  Created by Adam McDonald on 3/16/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SDGViewController : UIViewController
+@interface SDGUserStatsController : UIViewController
 
 @end
