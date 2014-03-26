@@ -35,6 +35,13 @@
 {
     [super viewDidLoad];
     
+    self.title = @"Worker Stats";
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:nil
+                                                                            action:nil];
+    
     self.tableView.backgroundColor = [SDGConstants backgroundColor];
     self.tableView.backgroundView.backgroundColor = [SDGConstants backgroundColor];
     self.tableView.separatorInset = UIEdgeInsetsZero;

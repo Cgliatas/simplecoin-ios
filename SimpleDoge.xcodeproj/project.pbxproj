@@ -22,6 +22,7 @@
 		6621FBFE18D65F8300FE87F7 /* SimpleDogeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6621FBFD18D65F8300FE87F7 /* SimpleDogeTests.m */; };
 		6621FC0A18D6728C00FE87F7 /* SDGUserStatsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6621FC0818D6728C00FE87F7 /* SDGUserStatsController.m */; };
 		6621FC0B18D6728C00FE87F7 /* SDGUserStatsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6621FC0918D6728C00FE87F7 /* SDGUserStatsController.xib */; };
+		66467E0418E2748E004F5E55 /* SDGPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 66467E0318E2748E004F5E55 /* SDGPool.m */; };
 		665216C818DD3796009E04DB /* SDGPoolStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665216C618DD3796009E04DB /* SDGPoolStatsViewController.m */; };
 		665216C918DD3796009E04DB /* SDGPoolStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665216C718DD3796009E04DB /* SDGPoolStatsViewController.xib */; };
 		665216CD18DD4732009E04DB /* SDGWorkerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665216CB18DD4732009E04DB /* SDGWorkerDetailsViewController.m */; };
@@ -65,6 +66,8 @@
 		6621FC0718D6728C00FE87F7 /* SDGUserStatsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGUserStatsController.h; sourceTree = "<group>"; };
 		6621FC0818D6728C00FE87F7 /* SDGUserStatsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGUserStatsController.m; sourceTree = "<group>"; };
 		6621FC0918D6728C00FE87F7 /* SDGUserStatsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGUserStatsController.xib; sourceTree = "<group>"; };
+		66467E0218E2748E004F5E55 /* SDGPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGPool.h; sourceTree = "<group>"; };
+		66467E0318E2748E004F5E55 /* SDGPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGPool.m; sourceTree = "<group>"; };
 		665216C518DD3796009E04DB /* SDGPoolStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGPoolStatsViewController.h; sourceTree = "<group>"; };
 		665216C618DD3796009E04DB /* SDGPoolStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGPoolStatsViewController.m; sourceTree = "<group>"; };
 		665216C718DD3796009E04DB /* SDGPoolStatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGPoolStatsViewController.xib; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				66EF334318D8FCBF00B5CB39 /* SDGCard.m */,
 				667906F318DA9BBA007829AA /* SDGConstants.h */,
 				667906F418DA9BBA007829AA /* SDGConstants.m */,
+				66467E0218E2748E004F5E55 /* SDGPool.h */,
+				66467E0318E2748E004F5E55 /* SDGPool.m */,
 				665216C518DD3796009E04DB /* SDGPoolStatsViewController.h */,
 				665216C618DD3796009E04DB /* SDGPoolStatsViewController.m */,
 				665216C718DD3796009E04DB /* SDGPoolStatsViewController.xib */,
@@ -338,6 +343,7 @@
 				6621FBE918D65F8300FE87F7 /* SDGAppDelegate.m in Sources */,
 				66EF334118D8FBC200B5CB39 /* SDGWorker.m in Sources */,
 				665216C818DD3796009E04DB /* SDGPoolStatsViewController.m in Sources */,
+				66467E0418E2748E004F5E55 /* SDGPool.m in Sources */,
 				665216CD18DD4732009E04DB /* SDGWorkerDetailsViewController.m in Sources */,
 				6621FC0A18D6728C00FE87F7 /* SDGUserStatsController.m in Sources */,
 				667906F518DA9BBA007829AA /* SDGConstants.m in Sources */,

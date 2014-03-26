@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define kSDGAddresses @"kSDGAddresses"
+
 @interface SDGConstants : NSObject
 + (UIColor *)backgroundColor;
 + (UIColor *)alternateBackgroundColor;

@@ -29,7 +29,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.addresses = @[@"DDTGag9oaBMRxCmknEMRGBu5hby93VHFrY", @"DEKBPiBMPRVY1fMTfi2znTqmi6rkxUBaD2", @"DPyT9tF5T5CQb7dnwXVE8hD2E6LiAYhTTs"];
+        
     }
     return self;
 }
@@ -45,24 +45,76 @@
     
     self.title = @"User Stats";
     
-    self.addressTextField.text = @"DDTGag9oaBMRxCmknEMRGBu5hby93VHFrY";
-    
     self.tableView.backgroundColor = [SDGConstants backgroundColor];
     self.tableView.backgroundView.backgroundColor = [SDGConstants backgroundColor];
     self.tableView.separatorInset = UIEdgeInsetsZero;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self loadRecentAddresses];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    self.addressTextField.text = @"";
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Actions
 
 - (IBAction)tappedViewStatsButton:(id)sender
 {
+    [self.addressTextField resignFirstResponder];
+    
     NSString *address = self.addressTextField.text;
+    
+    // Validate address
+    if (address == nil || [address length] == 0) return;
+    
+    // Store address
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *savedAddresses = [defaults objectForKey:kSDGAddresses];
+    if (savedAddresses) {
+        // Add to existing list of addresses if it doesn't exist already
+        if (![savedAddresses containsObject:address]) {
+            NSMutableArray *array = [NSMutableArray arrayWithArray:savedAddresses];
+            [array addObject:address];
+            savedAddresses = array;
+        }
+    } else {
+        // No addresses saved yet
+        savedAddresses = @[address];
+    }
+    [defaults setObject:savedAddresses forKey:kSDGAddresses];
+    [defaults synchronize];
+    
+    // Hit API
+    [self fetchStatsForAddress:address];
+}
+
+#pragma mark - Instance Methods
+
+- (void)loadRecentAddresses
+{
+    NSArray *savedAddresses = [[NSUserDefaults standardUserDefaults] objectForKey:kSDGAddresses];
+    if (savedAddresses) {
+        self.addresses = savedAddresses;
+    } else {
+        self.addresses = @[];
+    }
+    
+    [self.tableView reloadData];
+}
+
+- (void)fetchStatsForAddress:(NSString *)address
+{
     NSString *filter = [NSString stringWithFormat:@"{\"user\": \"%@\"}", address];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -80,8 +132,6 @@
          }];
 }
 
-#pragma mark - Instance Methods
-
 - (void)parseWorkers:(NSDictionary *)response
 {
     NSMutableArray *workers = [NSMutableArray array];
@@ -90,12 +140,6 @@
         SDGWorker *worker = [[SDGWorker alloc] initWithDictionary:workerDict];
         [workers addObject:worker];
     }
-    NSLog(@"%@", workers);
-    
-    SDGWorker *offlineWorker = [[SDGWorker alloc] init];
-    offlineWorker.name = @"gtx750ti";
-    offlineWorker.isOnline = NO;
-    [workers addObject:offlineWorker];
     
     [self presentUserStatsForWorkers:workers];
 }
@@ -140,7 +184,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self tappedViewStatsButton:nil];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    [self fetchStatsForAddress:cell.textLabel.text];
 }
 
 @end
