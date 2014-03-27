@@ -19,8 +19,6 @@
         self.hashRate = [dictionary[@"last_10_hashrate"] floatValue];
         if (dictionary[@"round_shares"] && dictionary[@"round_shares"] != [NSNull null]) {
             self.roundShares = [dictionary[@"round_shares"] integerValue];
-        } else {
-            self.roundShares = 50000;
         }
         
         NSMutableArray *array = [NSMutableArray array];

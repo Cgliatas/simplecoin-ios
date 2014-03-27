@@ -8,6 +8,7 @@
 
 #import "SDGUserStatsController.h"
 
+#import "SDGAddressStore.h"
 #import "SDGConstants.h"
 #import "SDGUser.h"
 #import "SDGWorkerStatsViewController.h"
@@ -21,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 
 // Data
-@property (strong, nonatomic) NSArray *addresses;
+@property (strong, nonatomic) NSMutableArray *addresses;
 @end
 
 @implementation SDGUserStatsController
@@ -80,21 +81,7 @@
     if (address == nil || [address length] == 0) return;
     
     // Store address
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSArray *savedAddresses = [defaults objectForKey:kSDGAddresses];
-    if (savedAddresses) {
-        // Add to existing list of addresses if it doesn't exist already
-        if (![savedAddresses containsObject:address]) {
-            NSMutableArray *array = [NSMutableArray arrayWithArray:savedAddresses];
-            [array addObject:address];
-            savedAddresses = array;
-        }
-    } else {
-        // No addresses saved yet
-        savedAddresses = @[address];
-    }
-    [defaults setObject:savedAddresses forKey:kSDGAddresses];
-    [defaults synchronize];
+    [SDGAddressStore save:address];
     
     // Hit API
     [self fetchStatsForAddress:address];
@@ -106,9 +93,9 @@
 {
     NSArray *savedAddresses = [[NSUserDefaults standardUserDefaults] objectForKey:kSDGAddresses];
     if (savedAddresses) {
-        self.addresses = savedAddresses;
+        self.addresses = [NSMutableArray arrayWithArray:savedAddresses];
     } else {
-        self.addresses = @[];
+        self.addresses = [NSMutableArray array];
     }
     
     [self.tableView reloadData];
@@ -158,10 +145,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = indexPath.row;
+//    BOOL isEven = (row % 2 == 0);
     NSString *cellIdentifier = @"ReuseIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+//        cell.contentView.backgroundColor = isEven ? [SDGConstants alternateBackgroundColor] : [SDGConstants separatorColor];
         cell.contentView.backgroundColor = [SDGConstants alternateBackgroundColor];
         cell.textLabel.font = [UIFont systemFontOfSize:13.0];
         cell.textLabel.textColor = [SDGConstants textColor];
@@ -170,6 +159,29 @@
     cell.textLabel.text = self.addresses[row];
     
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Remove from persistent storage
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        NSString *address = cell.textLabel.text;
+        [SDGAddressStore remove:address];
+        
+        // Remove from local array
+        NSInteger row = indexPath.row;
+        [self.addresses removeObjectAtIndex:row];
+        
+        // Remove from table view
+        cell.alpha = 0.0;
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+    }
 }
 
 #pragma mark - UITableViewDelegate
