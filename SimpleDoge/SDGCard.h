@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface SDGCard : NSObject
-@property (assign) NSInteger difficultyAccepted;
-@property (assign) NSInteger difficultyRejected;
 @property (assign) NSInteger fanPercent;
 @property (assign) NSInteger gpuClock;
 @property (assign) NSInteger hardwareErrors;

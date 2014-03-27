@@ -9,9 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface SDGWorker : NSObject
+@property (assign) NSInteger accepted;
+@property (assign) CGFloat efficiency;
+@property (assign) CGFloat hashRate;
 @property (strong, nonatomic) NSString *name;
 @property (assign) BOOL isOnline;
+@property (assign) NSInteger rejected;
 @property (strong, nonatomic) NSArray *cards;
 - (id)initWithDictionary:(NSDictionary *)dictionary;
-- (CGFloat)hashRate;
+//- (CGFloat)hashRate;
+//- (CGFloat)efficiency;
 @end

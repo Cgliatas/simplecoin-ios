@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class SDGUser;
+
 @interface SDGWorkerStatsViewController : UIViewController
-- (id)initWithWorkers:(NSArray *)workers;
+- (id)initWithUser:(SDGUser *)user;
 @end

@@ -9,6 +9,7 @@
 #import "SDGUserStatsController.h"
 
 #import "SDGConstants.h"
+#import "SDGUser.h"
 #import "SDGWorkerStatsViewController.h"
 #import "SDGWorker.h"
 
@@ -115,12 +116,10 @@
 
 - (void)fetchStatsForAddress:(NSString *)address
 {
-    NSString *filter = [NSString stringWithFormat:@"{\"user\": \"%@\"}", address];
-    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    [manager GET:@"http://simpledoge.com/api/status"
-      parameters:@{@"__filter_by": filter}
+    [manager GET:[NSString stringWithFormat:@"http://stage.simpledoge.com/api/%@", address]
+      parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              NSLog(@"success");
              NSDictionary *response = (NSDictionary *)responseObject;
@@ -134,19 +133,13 @@
 
 - (void)parseWorkers:(NSDictionary *)response
 {
-    NSMutableArray *workers = [NSMutableArray array];
-    NSArray *objects = response[@"objects"];
-    for (NSDictionary *workerDict in objects) {
-        SDGWorker *worker = [[SDGWorker alloc] initWithDictionary:workerDict];
-        [workers addObject:worker];
-    }
-    
-    [self presentUserStatsForWorkers:workers];
+    SDGUser *user = [[SDGUser alloc] initWithDictionary:response];
+    [self presentUserStats:user];
 }
 
-- (void)presentUserStatsForWorkers:(NSArray *)workers
+- (void)presentUserStats:(SDGUser *)user
 {
-    SDGWorkerStatsViewController *vc = [[SDGWorkerStatsViewController alloc] initWithWorkers:workers];
+    SDGWorkerStatsViewController *vc = [[SDGWorkerStatsViewController alloc] initWithUser:user];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

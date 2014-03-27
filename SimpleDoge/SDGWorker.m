@@ -16,36 +16,38 @@
 {
     self = [super init];
     if (self) {
-        self.name = dictionary[@"worker"];
-        
-        self.isOnline = YES;
-        
-        NSError *error = nil;
-        NSString *status = dictionary[@"status"];
-        NSData *statusData = [status dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *statusDict = [NSJSONSerialization JSONObjectWithData:statusData
-                                                                   options:kNilOptions
-                                                                     error:&error];
-        
-        if (error) {
-            NSLog(@"%@", [error localizedDescription]);
-        }
+        self.accepted = [dictionary[@"accepted"] integerValue];
+        self.hashRate = [dictionary[@"last_10_hashrate"] floatValue];
+        self.efficiency = [dictionary[@"efficiency"] floatValue];
+        self.name = dictionary[@"name"];
+        self.isOnline = [dictionary[@"online"] boolValue];
+        self.rejected = [dictionary[@"rejected"] integerValue];
         
         NSMutableArray *array = [NSMutableArray array];
-        NSArray *gpus = statusDict[@"gpus"];
-        for (NSDictionary *gpuDict in gpus) {
-            SDGCard *card = [[SDGCard alloc] initWithDictionary:gpuDict];
-            [array addObject:card];
+        if (dictionary[@"status"] && dictionary[@"status"] != [NSNull null]) {
+            NSArray *gpus = dictionary[@"status"][@"gpus"];
+            for (NSDictionary *gpuDict in gpus) {
+                SDGCard *card = [[SDGCard alloc] initWithDictionary:gpuDict];
+                [array addObject:card];
+            }
+            self.cards = array;
+        } else {
+            self.cards = @[];
         }
-        self.cards = array;
     }
     return self;
 }
 
-- (CGFloat)hashRate
-{
-    return [[self.cards valueForKeyPath:@"@sum.mhsAverage"] floatValue];
-}
+//- (CGFloat)hashRate
+//{
+//    return [[self.cards valueForKeyPath:@"@sum.mhsAverage"] floatValue];
+//}
+
+//- (CGFloat)efficiency
+//{
+//    if ((self.accepted + self.rejected) == 0) return 100.0;
+//    return (1.0 - (self.rejected / (float)(self.accepted + self.rejected))) * 100.0;
+//}
 
 - (NSString *)description
 {

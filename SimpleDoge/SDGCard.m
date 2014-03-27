@@ -14,10 +14,9 @@
 {
     self = [super init];
     if (self) {
-        self.difficultyAccepted = [dictionary[@"Difficulty Accepted"] integerValue];
-        self.difficultyRejected = [dictionary[@"Difficulty Rejected"] integerValue];
         self.fanPercent = [dictionary[@"Fan Percent"] integerValue];
         self.gpuClock = [dictionary[@"GPU Clock"] integerValue];
+        self.hardwareErrors = [dictionary[@"Hardware Errors"] integerValue];
         self.memoryClock = [dictionary[@"Memory Clock"] integerValue];
         self.mhsAverage = [dictionary[@"MHS av"] floatValue];
         self.number = [dictionary[@"GPU"] integerValue];
@@ -29,7 +28,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@> GPU #%d - difficultyAccepted: %d, difficultyRejected: %d, fanPercent: %d, gpuClock: %d, memoryClock: %d, mhsAverage: %f, temperature: %d, status: %@", NSStringFromClass([self class]), self.number, self.difficultyAccepted, self.difficultyRejected, self.fanPercent, self.gpuClock, self.memoryClock, self.mhsAverage, self.temperature, self.status];
+    return [NSString stringWithFormat:@"<%@> GPU #%d - fanPercent: %d, gpuClock: %d, memoryClock: %d, mhsAverage: %f, temperature: %d, status: %@", NSStringFromClass([self class]), self.number, self.fanPercent, self.gpuClock, self.memoryClock, self.mhsAverage, self.temperature, self.status];
 }
 
 @end
