@@ -29,12 +29,15 @@
     SDGPoolStatsViewController *vc1 = [[SDGPoolStatsViewController alloc] init];
     UINavigationController *nc1 = [[UINavigationController alloc] initWithRootViewController:vc1];
     nc1.tabBarItem.title = @"Pool Stats";
+    nc1.tabBarItem.image = [UIImage imageNamed:@"icon-bar-chart"];
 
     SDGUserStatsController *vc2 = [[SDGUserStatsController alloc] init];
     UINavigationController *nc2 = [[UINavigationController alloc] initWithRootViewController:vc2];
     nc2.tabBarItem.title = @"User Stats";
+    nc2.tabBarItem.image = [UIImage imageNamed:@"icon-user"];
     
     UITabBarController *tbc = [[UITabBarController alloc] init];
+    tbc.tabBar.tintColor = [SDGConstants separatorColor];
     tbc.viewControllers = @[nc1, nc2];
     
     self.window.rootViewController = tbc;
