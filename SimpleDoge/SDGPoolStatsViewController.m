@@ -97,7 +97,13 @@
                                         (self.pool.estimatedSecondsRemaining / 3600),
                                         abs((self.pool.estimatedSecondsRemaining / 60) % 60),
                                         abs(self.pool.estimatedSecondsRemaining % 60)];
-    self.roundLuckLabel.text = [NSString stringWithFormat:@"%.1f%%", ((self.pool.sharesToSolve / (float)self.pool.completedShares) * 100.0)];
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [numberFormatter setMaximumFractionDigits:1];
+    CGFloat luck = ((self.pool.sharesToSolve / (float)self.pool.completedShares) * 100.0);
+    NSString *luckString = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:luck]];
+    self.roundLuckLabel.text = [NSString stringWithFormat:@"%@%%", luckString];
 }
 
 @end
