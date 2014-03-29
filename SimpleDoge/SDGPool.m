@@ -10,12 +10,19 @@
 
 @implementation SDGPool
 
+//@property (assign) CGFloat dailyEstimate;
+//@property (assign) CGFloat estimatedRoundPayout;
+
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
     self = [super init];
     if (self) {
+        self.completedShares = [dictionary[@"completed_shares"] integerValue];
+        self.estimatedSecondsRemaining = [dictionary[@"est_sec_remaining"] integerValue];
         self.hashRate = [dictionary[@"hashrate"] integerValue];
+        self.roundDuration = [dictionary[@"round_duration"] integerValue];
         self.roundShares = [dictionary[@"round_shares"] integerValue];
+        self.sharesToSolve = [dictionary[@"shares_to_solve"] integerValue];
         self.workers = [dictionary[@"workers"] integerValue];
     }
     return self;

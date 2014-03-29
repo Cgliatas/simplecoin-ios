@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface SDGPool : NSObject
+@property (assign) NSInteger completedShares;
+@property (assign) NSInteger estimatedSecondsRemaining;
 @property (assign) NSInteger hashRate;
+@property (assign) NSInteger roundDuration;
 @property (assign) NSInteger roundShares;
+@property (assign) NSInteger sharesToSolve;
 @property (assign) NSInteger workers;
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 @end

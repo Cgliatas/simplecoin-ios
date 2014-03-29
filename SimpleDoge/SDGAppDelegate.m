@@ -20,9 +20,9 @@
     
 //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    [[UINavigationBar appearance] setTintColor:[SDGConstants tintColor]];
+    [[UINavigationBar appearance] setTintColor:[SDGConstants separatorColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:
-        @{NSForegroundColorAttributeName: [SDGConstants tintColor],
+        @{NSForegroundColorAttributeName: [SDGConstants separatorColor],
           NSFontAttributeName: [UIFont boldSystemFontOfSize:22.0]
     }];
     

@@ -20,6 +20,9 @@
         self.hashRate = [dictionary[@"last_10_hashrate"] floatValue];
         self.efficiency = [dictionary[@"efficiency"] floatValue];
         self.name = dictionary[@"name"];
+        if (self.name == nil || [self.name isEqualToString:@""]) {
+            self.name = @"<unknown>";
+        }
         self.isOnline = [dictionary[@"online"] boolValue];
         self.rejected = [dictionary[@"rejected"] integerValue];
         

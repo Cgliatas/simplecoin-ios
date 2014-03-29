@@ -66,16 +66,23 @@
 {
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [numberFormatter setMaximumFractionDigits:3];
     
     self.roundSharesLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithInteger:self.user.roundShares]];
     self.averageHashRateLabel.text = [NSString stringWithFormat:@"%.3f Mh/s", self.user.hashRate];
+    
+    NSString *roundPayout = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:self.user.estimatedRoundPayout]];
+    self.estimatedRoundPayoutLabel.text = [NSString stringWithFormat:@"%@ Ð", roundPayout];
+    
+    NSString *dogeDay = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:self.user.dailyEstimate]];
+    self.estimatedDogeDayLabel.text = [NSString stringWithFormat:@"%@ Ð", dogeDay];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return @"Worker Status";
+    return @" Worker Status";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

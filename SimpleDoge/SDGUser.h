@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface SDGUser : NSObject
+@property (assign) CGFloat dailyEstimate;
+@property (assign) CGFloat estimatedRoundPayout;
 @property (assign) CGFloat hashRate;
 @property (assign) NSInteger roundShares;
 @property (nonatomic, strong) NSArray *workers;

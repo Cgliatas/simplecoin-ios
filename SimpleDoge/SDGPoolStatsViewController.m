@@ -16,6 +16,9 @@
 // Interface
 @property (weak, nonatomic) IBOutlet UILabel *hashRateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *workersLabel;
+@property (weak, nonatomic) IBOutlet UILabel *roundTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *estimatedTimeLeftLabel;
+@property (weak, nonatomic) IBOutlet UILabel *roundLuckLabel;
 
 // Data
 @property (strong, nonatomic) SDGPool *pool;
@@ -38,6 +41,8 @@
     
     self.title = @"Pool Stats";
     
+    self.navigationItem.rightBarButtonItem = [self refreshBarButtonItem];
+    
     [self loadPoolStats];
 }
 
@@ -48,6 +53,14 @@
 }
 
 #pragma mark - Instance Methods
+
+- (UIBarButtonItem *)refreshBarButtonItem
+{
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                                                               target:self
+                                                                               action:@selector(loadPoolStats)];
+    return barButton;
+}
 
 - (void)loadPoolStats
 {
@@ -76,6 +89,15 @@
 {
     self.hashRateLabel.text = [NSString stringWithFormat:@"%.1f Mh/s", (self.pool.hashRate / 1000.0)];
     self.workersLabel.text = [NSString stringWithFormat:@"%d", self.pool.workers];
+    self.roundTimeLabel.text = [NSString stringWithFormat:@"%.2d:%02d:%02d",
+                                (self.pool.roundDuration / 3600),
+                                ((self.pool.roundDuration / 60) % 60),
+                                (self.pool.roundDuration % 60)];
+    self.estimatedTimeLeftLabel.text = [NSString stringWithFormat:@"%.2d:%02d:%02d",
+                                        (self.pool.estimatedSecondsRemaining / 3600),
+                                        abs((self.pool.estimatedSecondsRemaining / 60) % 60),
+                                        abs(self.pool.estimatedSecondsRemaining % 60)];
+    self.roundLuckLabel.text = [NSString stringWithFormat:@"%.1f%%", ((self.pool.sharesToSolve / (float)self.pool.completedShares) * 100.0)];
 }
 
 @end

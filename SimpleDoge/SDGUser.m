@@ -16,6 +16,8 @@
 {
     self = [super init];
     if (self) {
+        self.dailyEstimate = [dictionary[@"daily_est"] floatValue];
+        self.estimatedRoundPayout = [dictionary[@"est_round_payout"] floatValue];
         self.hashRate = [dictionary[@"last_10_hashrate"] floatValue];
         if (dictionary[@"round_shares"] && dictionary[@"round_shares"] != [NSNull null]) {
             self.roundShares = [dictionary[@"round_shares"] integerValue];
