@@ -21,7 +21,7 @@
         self.efficiency = [dictionary[@"efficiency"] floatValue];
         self.name = dictionary[@"name"];
         if (self.name == nil || [self.name isEqualToString:@""]) {
-            self.name = @"<unknown>";
+            self.name = @"[unnamed]";
         }
         self.isOnline = [dictionary[@"online"] boolValue];
         self.rejected = [dictionary[@"rejected"] integerValue];
