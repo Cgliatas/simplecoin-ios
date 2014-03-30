@@ -66,7 +66,7 @@
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    [manager GET:@"http://stage.simpledoge.com/api/pool_stats"
+    [manager GET:@"http://simpledoge.com/api/pool_stats"
       parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              NSLog(@"success");
