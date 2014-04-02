@@ -108,12 +108,9 @@
     [manager GET:[NSString stringWithFormat:@"http://simpledoge.com/api/%@", address]
       parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-             NSLog(@"success");
              NSDictionary *response = (NSDictionary *)responseObject;
-             NSLog(@"%@", response);
              [self parseWorkers:response];
          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-             NSLog(@"failure");
              NSLog(@"%@", [error localizedDescription]);
          }];
 }

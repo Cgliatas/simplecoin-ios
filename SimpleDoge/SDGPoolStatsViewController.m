@@ -69,13 +69,10 @@
     [manager GET:@"http://simpledoge.com/api/pool_stats"
       parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-             NSLog(@"success");
              NSDictionary *response = (NSDictionary *)responseObject;
-             NSLog(@"%@", response);
              [self parseStats:response];
              [self updateStats];
          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-             NSLog(@"failure");
              NSLog(@"%@", [error localizedDescription]);
          }];
 }

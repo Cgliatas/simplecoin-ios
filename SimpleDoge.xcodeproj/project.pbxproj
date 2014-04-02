@@ -267,6 +267,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Adam McDonald";
 				TargetAttributes = {
+					6621FBD418D65F8300FE87F7 = {
+						DevelopmentTeam = YX7CTSJGGE;
+					};
 					6621FBEF18D65F8300FE87F7 = {
 						TestTargetID = 6621FBD418D65F8300FE87F7;
 					};
@@ -496,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -514,6 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -522,6 +527,7 @@
 				GCC_PREFIX_HEADER = "SimpleDoge/SimpleDoge-Prefix.pch";
 				INFOPLIST_FILE = "SimpleDoge/SimpleDoge-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C2B8A0CF-7157-46E8-B72E-85D9648DE694";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -605,6 +611,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -613,7 +620,7 @@
 				GCC_PREFIX_HEADER = "SimpleDoge/SimpleDoge-Prefix.pch";
 				INFOPLIST_FILE = "SimpleDoge/SimpleDoge-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "87D40FBE-4131-4279-A3CF-61914886AFD5";
+				PROVISIONING_PROFILE = "DE78A014-3A40-4C7E-AE54-B42E1C62E357";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Ad Hoc";
