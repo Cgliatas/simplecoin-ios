@@ -12,10 +12,14 @@
 #import "SDGPoolStatsViewController.h"
 #import "SDGUserStatsController.h"
 
+#import <Crashlytics/Crashlytics.h>
+
 @implementation SDGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Crashlytics startWithAPIKey:@"e53ebf0af440d99cb7ed424150ba614906dd1871"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
 //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
