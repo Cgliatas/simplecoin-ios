@@ -16,4 +16,5 @@
 + (UIColor *)separatorColor;
 + (UIColor *)textColor;
 + (UIColor *)tintColor;
++ (UIColor *)tableViewSectionHeaderColor;
 @end

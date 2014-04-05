@@ -129,9 +129,25 @@
 
 #pragma mark - UITableViewDataSource
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    return @" Recently Visited Stats";
+//}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return @" Recently Visited Stats";
+    return IS_IPAD ? 50.0 : 20.0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    headerLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    headerLabel.backgroundColor = [SDGConstants tableViewSectionHeaderColor];
+    headerLabel.font = [UIFont systemFontOfSize:(IS_IPAD ? 22.0 : 12.0)];
+    headerLabel.text = @" Recently Visited Stats";
+    headerLabel.textColor = [SDGConstants backgroundColor];
+    return headerLabel;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

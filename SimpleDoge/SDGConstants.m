@@ -50,4 +50,12 @@
                            alpha:1.0];
 }
 
++ (UIColor *)tableViewSectionHeaderColor;
+{
+    return [UIColor colorWithRed:(111.0/255.0)
+                           green:(121.0/255.0)
+                            blue:(131.0/255.0)
+                           alpha:1.0];
+}
+
 @end

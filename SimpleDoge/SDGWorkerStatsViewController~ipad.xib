@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XpZ-wK-Frl">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XpZ-wK-Frl">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -149,8 +149,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="XpZ-wK-Frl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="H4y-7E-kYb"/>
                 <constraint firstAttribute="trailing" secondItem="XpZ-wK-Frl" secondAttribute="trailing" id="JwC-Uh-uN3"/>
                 <constraint firstItem="XpZ-wK-Frl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VAY-Jt-kqn"/>
+                <constraint firstAttribute="bottom" secondItem="XpZ-wK-Frl" secondAttribute="bottom" id="d0F-LS-ntB"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
         </view>
