@@ -70,13 +70,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
         cell.contentView.backgroundColor = isEven ? [SDGConstants alternateBackgroundColor] : [SDGConstants separatorColor];
         cell.detailTextLabel.textColor = [SDGConstants textColor];
-        cell.detailTextLabel.font = [UIFont systemFontOfSize:(IS_IPAD ? 22.0 : 13.0)];
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:(IS_IPAD ? 22.0 : 12.0)];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textLabel.font = [UIFont systemFontOfSize:(IS_IPAD ? 28.0 : 17.0)];
         cell.textLabel.textColor = [SDGConstants textColor];
     }
     SDGCard *card = self.worker.cards[row];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Kh/s  •  HW: %d  •  %d°  •  Fan: %d  •  %d/%d", (int)(card.mhsAverage*1000), card.hardwareErrors, card.temperature, card.fanPercent, card.gpuClock, card.memoryClock];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d KH/s  •  HW: %d  •  %d°  •  Fan: %d  •  %d/%d", (int)(card.mhsAverage*1000), card.hardwareErrors, card.temperature, card.fanPercent, card.gpuClock, card.memoryClock];
     cell.textLabel.text = [NSString stringWithFormat:@"GPU #%d", card.number];
     return cell;
 }
