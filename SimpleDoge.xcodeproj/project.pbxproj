@@ -15,37 +15,26 @@
 		6621FBE518D65F8300FE87F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6621FBE418D65F8300FE87F7 /* main.m */; };
 		6621FBE918D65F8300FE87F7 /* SDGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6621FBE818D65F8300FE87F7 /* SDGAppDelegate.m */; };
 		6621FBEB18D65F8300FE87F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6621FBEA18D65F8300FE87F7 /* Images.xcassets */; };
-		6621FBF218D65F8300FE87F7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBF118D65F8300FE87F7 /* XCTest.framework */; };
-		6621FBF318D65F8300FE87F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBD818D65F8300FE87F7 /* Foundation.framework */; };
-		6621FBF418D65F8300FE87F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBDC18D65F8300FE87F7 /* UIKit.framework */; };
-		6621FBFC18D65F8300FE87F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6621FBFA18D65F8300FE87F7 /* InfoPlist.strings */; };
-		6621FBFE18D65F8300FE87F7 /* SimpleDogeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6621FBFD18D65F8300FE87F7 /* SimpleDogeTests.m */; };
 		6621FC0A18D6728C00FE87F7 /* SDGUserStatsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6621FC0818D6728C00FE87F7 /* SDGUserStatsController.m */; };
-		6621FC0B18D6728C00FE87F7 /* SDGUserStatsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6621FC0918D6728C00FE87F7 /* SDGUserStatsController.xib */; };
+		6621FC0B18D6728C00FE87F7 /* SDGUserStatsController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6621FC0918D6728C00FE87F7 /* SDGUserStatsController~iphone.xib */; };
 		662561A118E3B614005D0699 /* SDGAddressStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 662561A018E3B614005D0699 /* SDGAddressStore.m */; };
 		66467E0418E2748E004F5E55 /* SDGPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 66467E0318E2748E004F5E55 /* SDGPool.m */; };
 		665216C818DD3796009E04DB /* SDGPoolStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665216C618DD3796009E04DB /* SDGPoolStatsViewController.m */; };
-		665216C918DD3796009E04DB /* SDGPoolStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665216C718DD3796009E04DB /* SDGPoolStatsViewController.xib */; };
+		665216C918DD3796009E04DB /* SDGPoolStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665216C718DD3796009E04DB /* SDGPoolStatsViewController~iphone.xib */; };
 		665216CD18DD4732009E04DB /* SDGWorkerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665216CB18DD4732009E04DB /* SDGWorkerDetailsViewController.m */; };
-		665216CE18DD4732009E04DB /* SDGWorkerDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665216CC18DD4732009E04DB /* SDGWorkerDetailsViewController.xib */; };
+		665216CE18DD4732009E04DB /* SDGWorkerDetailsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665216CC18DD4732009E04DB /* SDGWorkerDetailsViewController~iphone.xib */; };
 		665C4DB618E28D9B00B2B218 /* SDGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 665C4DB518E28D9B00B2B218 /* SDGUser.m */; };
 		667906F118DA92F8007829AA /* SDGWorkerStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667906EF18DA92F8007829AA /* SDGWorkerStatsViewController.m */; };
-		667906F218DA92F8007829AA /* SDGWorkerStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667906F018DA92F8007829AA /* SDGWorkerStatsViewController.xib */; };
+		667906F218DA92F8007829AA /* SDGWorkerStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667906F018DA92F8007829AA /* SDGWorkerStatsViewController~iphone.xib */; };
 		667906F518DA9BBA007829AA /* SDGConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 667906F418DA9BBA007829AA /* SDGConstants.m */; };
 		668652EF18EBA581008E58F2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668652EE18EBA581008E58F2 /* Crashlytics.framework */; };
+		66B2719718EF99B800CBAB9A /* SDGPoolStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B2719618EF99B800CBAB9A /* SDGPoolStatsViewController~ipad.xib */; };
+		66B2719918EFA30C00CBAB9A /* SDGUserStatsController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B2719818EFA30C00CBAB9A /* SDGUserStatsController~ipad.xib */; };
+		66B2719B18EFABB700CBAB9A /* SDGWorkerStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B2719A18EFABB700CBAB9A /* SDGWorkerStatsViewController~ipad.xib */; };
+		66B2719D18EFB52600CBAB9A /* SDGWorkerDetailsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B2719C18EFB52600CBAB9A /* SDGWorkerDetailsViewController~ipad.xib */; };
 		66EF334118D8FBC200B5CB39 /* SDGWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 66EF334018D8FBC200B5CB39 /* SDGWorker.m */; };
 		66EF334418D8FCBF00B5CB39 /* SDGCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 66EF334318D8FCBF00B5CB39 /* SDGCard.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6621FBF518D65F8300FE87F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6621FBCD18D65F8300FE87F7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6621FBD418D65F8300FE87F7;
-			remoteInfo = SimpleDoge;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3795661BC59443FC93F0CF89 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -61,32 +50,32 @@
 		6621FBE718D65F8300FE87F7 /* SDGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDGAppDelegate.h; sourceTree = "<group>"; };
 		6621FBE818D65F8300FE87F7 /* SDGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDGAppDelegate.m; sourceTree = "<group>"; };
 		6621FBEA18D65F8300FE87F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6621FBF018D65F8300FE87F7 /* SimpleDogeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleDogeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6621FBF118D65F8300FE87F7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6621FBF918D65F8300FE87F7 /* SimpleDogeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleDogeTests-Info.plist"; sourceTree = "<group>"; };
-		6621FBFB18D65F8300FE87F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6621FBFD18D65F8300FE87F7 /* SimpleDogeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleDogeTests.m; sourceTree = "<group>"; };
 		6621FC0718D6728C00FE87F7 /* SDGUserStatsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGUserStatsController.h; sourceTree = "<group>"; };
 		6621FC0818D6728C00FE87F7 /* SDGUserStatsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGUserStatsController.m; sourceTree = "<group>"; };
-		6621FC0918D6728C00FE87F7 /* SDGUserStatsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGUserStatsController.xib; sourceTree = "<group>"; };
+		6621FC0918D6728C00FE87F7 /* SDGUserStatsController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SDGUserStatsController~iphone.xib"; sourceTree = "<group>"; };
 		6625619F18E3B614005D0699 /* SDGAddressStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGAddressStore.h; sourceTree = "<group>"; };
 		662561A018E3B614005D0699 /* SDGAddressStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGAddressStore.m; sourceTree = "<group>"; };
 		66467E0218E2748E004F5E55 /* SDGPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGPool.h; sourceTree = "<group>"; };
 		66467E0318E2748E004F5E55 /* SDGPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGPool.m; sourceTree = "<group>"; };
 		665216C518DD3796009E04DB /* SDGPoolStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGPoolStatsViewController.h; sourceTree = "<group>"; };
 		665216C618DD3796009E04DB /* SDGPoolStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGPoolStatsViewController.m; sourceTree = "<group>"; };
-		665216C718DD3796009E04DB /* SDGPoolStatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGPoolStatsViewController.xib; sourceTree = "<group>"; };
+		665216C718DD3796009E04DB /* SDGPoolStatsViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SDGPoolStatsViewController~iphone.xib"; sourceTree = "<group>"; };
 		665216CA18DD4732009E04DB /* SDGWorkerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGWorkerDetailsViewController.h; sourceTree = "<group>"; };
 		665216CB18DD4732009E04DB /* SDGWorkerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGWorkerDetailsViewController.m; sourceTree = "<group>"; };
-		665216CC18DD4732009E04DB /* SDGWorkerDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGWorkerDetailsViewController.xib; sourceTree = "<group>"; };
+		665216CC18DD4732009E04DB /* SDGWorkerDetailsViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SDGWorkerDetailsViewController~iphone.xib"; sourceTree = "<group>"; };
 		665C4DB418E28D9B00B2B218 /* SDGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGUser.h; sourceTree = "<group>"; };
 		665C4DB518E28D9B00B2B218 /* SDGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGUser.m; sourceTree = "<group>"; };
 		667906EE18DA92F8007829AA /* SDGWorkerStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGWorkerStatsViewController.h; sourceTree = "<group>"; };
 		667906EF18DA92F8007829AA /* SDGWorkerStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGWorkerStatsViewController.m; sourceTree = "<group>"; };
-		667906F018DA92F8007829AA /* SDGWorkerStatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGWorkerStatsViewController.xib; sourceTree = "<group>"; };
+		667906F018DA92F8007829AA /* SDGWorkerStatsViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SDGWorkerStatsViewController~iphone.xib"; sourceTree = "<group>"; };
 		667906F318DA9BBA007829AA /* SDGConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGConstants.h; sourceTree = "<group>"; };
 		667906F418DA9BBA007829AA /* SDGConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGConstants.m; sourceTree = "<group>"; };
 		668652EE18EBA581008E58F2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		66B2719618EF99B800CBAB9A /* SDGPoolStatsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SDGPoolStatsViewController~ipad.xib"; sourceTree = "<group>"; };
+		66B2719818EFA30C00CBAB9A /* SDGUserStatsController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SDGUserStatsController~ipad.xib"; sourceTree = "<group>"; };
+		66B2719A18EFABB700CBAB9A /* SDGWorkerStatsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SDGWorkerStatsViewController~ipad.xib"; sourceTree = "<group>"; };
+		66B2719C18EFB52600CBAB9A /* SDGWorkerDetailsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SDGWorkerDetailsViewController~ipad.xib"; sourceTree = "<group>"; };
 		66EF333F18D8FBC200B5CB39 /* SDGWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGWorker.h; sourceTree = "<group>"; };
 		66EF334018D8FBC200B5CB39 /* SDGWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDGWorker.m; sourceTree = "<group>"; };
 		66EF334218D8FCBF00B5CB39 /* SDGCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDGCard.h; sourceTree = "<group>"; };
@@ -106,16 +95,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6621FBED18D65F8300FE87F7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6621FBF218D65F8300FE87F7 /* XCTest.framework in Frameworks */,
-				6621FBF418D65F8300FE87F7 /* UIKit.framework in Frameworks */,
-				6621FBF318D65F8300FE87F7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				6621FBDE18D65F8300FE87F7 /* SimpleDoge */,
-				6621FBF718D65F8300FE87F7 /* SimpleDogeTests */,
 				6621FBD718D65F8300FE87F7 /* Frameworks */,
 				6621FBD618D65F8300FE87F7 /* Products */,
 				3795661BC59443FC93F0CF89 /* Pods.xcconfig */,
@@ -134,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				6621FBD518D65F8300FE87F7 /* SimpleDoge.app */,
-				6621FBF018D65F8300FE87F7 /* SimpleDogeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,20 +145,24 @@
 				66467E0318E2748E004F5E55 /* SDGPool.m */,
 				665216C518DD3796009E04DB /* SDGPoolStatsViewController.h */,
 				665216C618DD3796009E04DB /* SDGPoolStatsViewController.m */,
-				665216C718DD3796009E04DB /* SDGPoolStatsViewController.xib */,
+				66B2719618EF99B800CBAB9A /* SDGPoolStatsViewController~ipad.xib */,
+				665216C718DD3796009E04DB /* SDGPoolStatsViewController~iphone.xib */,
 				665C4DB418E28D9B00B2B218 /* SDGUser.h */,
 				665C4DB518E28D9B00B2B218 /* SDGUser.m */,
 				6621FC0718D6728C00FE87F7 /* SDGUserStatsController.h */,
 				6621FC0818D6728C00FE87F7 /* SDGUserStatsController.m */,
-				6621FC0918D6728C00FE87F7 /* SDGUserStatsController.xib */,
+				66B2719818EFA30C00CBAB9A /* SDGUserStatsController~ipad.xib */,
+				6621FC0918D6728C00FE87F7 /* SDGUserStatsController~iphone.xib */,
 				66EF333F18D8FBC200B5CB39 /* SDGWorker.h */,
 				66EF334018D8FBC200B5CB39 /* SDGWorker.m */,
 				665216CA18DD4732009E04DB /* SDGWorkerDetailsViewController.h */,
 				665216CB18DD4732009E04DB /* SDGWorkerDetailsViewController.m */,
-				665216CC18DD4732009E04DB /* SDGWorkerDetailsViewController.xib */,
+				665216CC18DD4732009E04DB /* SDGWorkerDetailsViewController~iphone.xib */,
+				66B2719C18EFB52600CBAB9A /* SDGWorkerDetailsViewController~ipad.xib */,
 				667906EE18DA92F8007829AA /* SDGWorkerStatsViewController.h */,
 				667906EF18DA92F8007829AA /* SDGWorkerStatsViewController.m */,
-				667906F018DA92F8007829AA /* SDGWorkerStatsViewController.xib */,
+				66B2719A18EFABB700CBAB9A /* SDGWorkerStatsViewController~ipad.xib */,
+				667906F018DA92F8007829AA /* SDGWorkerStatsViewController~iphone.xib */,
 				6621FBDF18D65F8300FE87F7 /* Supporting Files */,
 			);
 			path = SimpleDoge;
@@ -194,24 +175,6 @@
 				6621FBE118D65F8300FE87F7 /* InfoPlist.strings */,
 				6621FBE418D65F8300FE87F7 /* main.m */,
 				6621FBE618D65F8300FE87F7 /* SimpleDoge-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6621FBF718D65F8300FE87F7 /* SimpleDogeTests */ = {
-			isa = PBXGroup;
-			children = (
-				6621FBFD18D65F8300FE87F7 /* SimpleDogeTests.m */,
-				6621FBF818D65F8300FE87F7 /* Supporting Files */,
-			);
-			path = SimpleDogeTests;
-			sourceTree = "<group>";
-		};
-		6621FBF818D65F8300FE87F7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6621FBF918D65F8300FE87F7 /* SimpleDogeTests-Info.plist */,
-				6621FBFA18D65F8300FE87F7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -239,24 +202,6 @@
 			productReference = 6621FBD518D65F8300FE87F7 /* SimpleDoge.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6621FBEF18D65F8300FE87F7 /* SimpleDogeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6621FC0418D65F8300FE87F7 /* Build configuration list for PBXNativeTarget "SimpleDogeTests" */;
-			buildPhases = (
-				6621FBEC18D65F8300FE87F7 /* Sources */,
-				6621FBED18D65F8300FE87F7 /* Frameworks */,
-				6621FBEE18D65F8300FE87F7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6621FBF618D65F8300FE87F7 /* PBXTargetDependency */,
-			);
-			name = SimpleDogeTests;
-			productName = SimpleDogeTests;
-			productReference = 6621FBF018D65F8300FE87F7 /* SimpleDogeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -269,9 +214,6 @@
 				TargetAttributes = {
 					6621FBD418D65F8300FE87F7 = {
 						DevelopmentTeam = YX7CTSJGGE;
-					};
-					6621FBEF18D65F8300FE87F7 = {
-						TestTargetID = 6621FBD418D65F8300FE87F7;
 					};
 				};
 			};
@@ -288,7 +230,6 @@
 			projectRoot = "";
 			targets = (
 				6621FBD418D65F8300FE87F7 /* SimpleDoge */,
-				6621FBEF18D65F8300FE87F7 /* SimpleDogeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,20 +239,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				665216CE18DD4732009E04DB /* SDGWorkerDetailsViewController.xib in Resources */,
-				665216C918DD3796009E04DB /* SDGPoolStatsViewController.xib in Resources */,
-				6621FC0B18D6728C00FE87F7 /* SDGUserStatsController.xib in Resources */,
+				66B2719718EF99B800CBAB9A /* SDGPoolStatsViewController~ipad.xib in Resources */,
+				66B2719D18EFB52600CBAB9A /* SDGWorkerDetailsViewController~ipad.xib in Resources */,
+				665216CE18DD4732009E04DB /* SDGWorkerDetailsViewController~iphone.xib in Resources */,
+				665216C918DD3796009E04DB /* SDGPoolStatsViewController~iphone.xib in Resources */,
+				6621FC0B18D6728C00FE87F7 /* SDGUserStatsController~iphone.xib in Resources */,
+				66B2719918EFA30C00CBAB9A /* SDGUserStatsController~ipad.xib in Resources */,
+				66B2719B18EFABB700CBAB9A /* SDGWorkerStatsViewController~ipad.xib in Resources */,
 				6621FBE318D65F8300FE87F7 /* InfoPlist.strings in Resources */,
-				667906F218DA92F8007829AA /* SDGWorkerStatsViewController.xib in Resources */,
+				667906F218DA92F8007829AA /* SDGWorkerStatsViewController~iphone.xib in Resources */,
 				6621FBEB18D65F8300FE87F7 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6621FBEE18D65F8300FE87F7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6621FBFC18D65F8300FE87F7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,37 +320,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6621FBEC18D65F8300FE87F7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6621FBFE18D65F8300FE87F7 /* SimpleDogeTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6621FBF618D65F8300FE87F7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6621FBD418D65F8300FE87F7 /* SimpleDoge */;
-			targetProxy = 6621FBF518D65F8300FE87F7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6621FBE118D65F8300FE87F7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6621FBE218D65F8300FE87F7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6621FBFA18D65F8300FE87F7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6621FBFB18D65F8300FE87F7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -532,46 +445,6 @@
 			};
 			name = Release;
 		};
-		6621FC0518D65F8300FE87F7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleDoge.app/SimpleDoge";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimpleDoge/SimpleDoge-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SimpleDogeTests/SimpleDogeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		6621FC0618D65F8300FE87F7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleDoge.app/SimpleDoge";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimpleDoge/SimpleDoge-Prefix.pch";
-				INFOPLIST_FILE = "SimpleDogeTests/SimpleDogeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 		662561A218E3C62C005D0699 /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -625,24 +498,6 @@
 			};
 			name = "Ad Hoc";
 		};
-		662561A418E3C62C005D0699 /* Ad Hoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleDoge.app/SimpleDoge";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimpleDoge/SimpleDoge-Prefix.pch";
-				INFOPLIST_FILE = "SimpleDogeTests/SimpleDogeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = "Ad Hoc";
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -662,16 +517,6 @@
 				6621FC0218D65F8300FE87F7 /* Debug */,
 				6621FC0318D65F8300FE87F7 /* Release */,
 				662561A318E3C62C005D0699 /* Ad Hoc */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6621FC0418D65F8300FE87F7 /* Build configuration list for PBXNativeTarget "SimpleDogeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6621FC0518D65F8300FE87F7 /* Debug */,
-				6621FC0618D65F8300FE87F7 /* Release */,
-				662561A418E3C62C005D0699 /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
