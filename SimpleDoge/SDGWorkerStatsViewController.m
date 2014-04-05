@@ -69,7 +69,7 @@
     [numberFormatter setMaximumFractionDigits:3];
     
     self.roundSharesLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithInteger:self.user.roundShares]];
-    self.averageHashRateLabel.text = [NSString stringWithFormat:@"%.3f Mh/s", self.user.hashRate];
+    self.averageHashRateLabel.text = [NSString stringWithFormat:@"%.3f MH/s", self.user.hashRate];
     
     NSString *roundPayout = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:self.user.estimatedRoundPayout]];
     self.estimatedRoundPayoutLabel.text = [NSString stringWithFormat:@"%@ Ð", roundPayout];
@@ -127,7 +127,7 @@
         cell.textLabel.textColor = [SDGConstants textColor];
     }
     SDGWorker *worker = self.user.workers[row];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Hash rate: %.3f Mh/s  •  Efficiency: %.2f%%", worker.hashRate, worker.efficiency];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Hash rate: %.3f MH/s  •  Efficiency: %.2f%%", worker.hashRate, worker.efficiency];
     cell.imageView.image = worker.isOnline ? [UIImage imageNamed:@"online"] : [UIImage imageNamed:@"offline"];
     cell.textLabel.text = worker.name;
     return cell;

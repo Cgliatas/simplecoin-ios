@@ -84,7 +84,7 @@
 
 - (void)updateStats
 {
-    self.hashRateLabel.text = [NSString stringWithFormat:@"%.1f Mh/s", (self.pool.hashRate / 1000.0)];
+    self.hashRateLabel.text = [NSString stringWithFormat:@"%.1f MH/s", (self.pool.hashRate / 1000.0)];
     self.workersLabel.text = [NSString stringWithFormat:@"%d", self.pool.workers];
     self.roundTimeLabel.text = [NSString stringWithFormat:@"%.2d:%02d:%02d",
                                 (self.pool.roundDuration / 3600),
