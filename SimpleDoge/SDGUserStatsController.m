@@ -129,11 +129,6 @@
 
 #pragma mark - UITableViewDataSource
 
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    return @" Recently Visited Stats";
-//}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return IS_IPAD ? 50.0 : 20.0;

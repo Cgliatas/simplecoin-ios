@@ -13,7 +13,7 @@
 #import "SDGWorker.h"
 #import "SDGWorkerDetailsViewController.h"
 
-@interface SDGWorkerStatsViewController ()
+@interface SDGWorkerStatsViewController () <UIAlertViewDelegate>
 // Interface
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *roundSharesLabel;
@@ -78,12 +78,16 @@
     self.estimatedDogeDayLabel.text = [NSString stringWithFormat:@"%@ Ð", dogeDay];
 }
 
-#pragma mark - UITableViewDataSource
+#pragma mark - UIAlertViewDelegate
 
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    return @" Worker Status";
-//}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kPowerpoolAgentURL]];
+    }
+}
+
+#pragma mark - UITableViewDataSource
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
@@ -141,8 +145,18 @@
     
     NSInteger row = indexPath.row;
     SDGWorker *worker = self.user.workers[row];
-    SDGWorkerDetailsViewController *vc = [[SDGWorkerDetailsViewController alloc] initWithWorker:worker];
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    if ([worker.cards count] > 0) {
+        SDGWorkerDetailsViewController *vc = [[SDGWorkerDetailsViewController alloc] initWithWorker:worker];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No GPUs"
+                                                        message:@"Setup advanced stats to track GPU temps and actual hashrate with Powerpool Agent."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Close"
+                                              otherButtonTitles:@"Setup", nil];
+        [alert show];
+    }
 }
 
 @end
