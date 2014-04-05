@@ -90,10 +90,15 @@
                                 (self.pool.roundDuration / 3600),
                                 ((self.pool.roundDuration / 60) % 60),
                                 (self.pool.roundDuration % 60)];
-    self.estimatedTimeLeftLabel.text = [NSString stringWithFormat:@"%.2d:%02d:%02d",
-                                        (self.pool.estimatedSecondsRemaining / 3600),
-                                        abs((self.pool.estimatedSecondsRemaining / 60) % 60),
-                                        abs(self.pool.estimatedSecondsRemaining % 60)];
+    
+    NSString *timeLeft = [NSString stringWithFormat:@"%.2d:%02d:%02d",
+                          (self.pool.estimatedSecondsRemaining / 3600),
+                          abs((self.pool.estimatedSecondsRemaining / 60) % 60),
+                          abs(self.pool.estimatedSecondsRemaining % 60)];
+    if ((self.pool.estimatedSecondsRemaining / 3600) == 0) {
+        timeLeft = [@"-" stringByAppendingString:timeLeft];
+    }
+    self.estimatedTimeLeftLabel.text = timeLeft;
     
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
