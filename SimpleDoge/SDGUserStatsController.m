@@ -40,16 +40,20 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@""
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:nil
-                                                                            action:nil];
+    if (IS_IOS_7) {
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                                                 style:UIBarButtonItemStylePlain
+                                                                                target:nil
+                                                                                action:nil];
+    }
     
     self.title = @"User Stats";
     
     self.tableView.backgroundColor = [SDGConstants backgroundColor];
     self.tableView.backgroundView.backgroundColor = [SDGConstants backgroundColor];
-    self.tableView.separatorInset = UIEdgeInsetsZero;
+    if (IS_IOS_7) {
+        self.tableView.separatorInset = UIEdgeInsetsZero;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -131,7 +135,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return IS_IPAD ? 50.0 : 20.0;
+    return IS_IPAD ? 40.0 : 20.0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -158,13 +162,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = indexPath.row;
-//    BOOL isEven = (row % 2 == 0);
     NSString *cellIdentifier = @"ReuseIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-//        cell.contentView.backgroundColor = isEven ? [SDGConstants alternateBackgroundColor] : [SDGConstants separatorColor];
         cell.contentView.backgroundColor = [SDGConstants alternateBackgroundColor];
+        cell.textLabel.backgroundColor = [SDGConstants alternateBackgroundColor];
         cell.textLabel.font = [UIFont systemFontOfSize:(IS_IPAD ? 26.0 : 13.0)];
         cell.textLabel.textColor = [SDGConstants textColor];
     }

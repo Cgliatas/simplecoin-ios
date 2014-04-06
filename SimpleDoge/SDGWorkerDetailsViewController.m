@@ -39,7 +39,9 @@
     
     self.tableView.backgroundColor = [SDGConstants backgroundColor];
     self.tableView.backgroundView.backgroundColor = [SDGConstants backgroundColor];
-    self.tableView.separatorInset = UIEdgeInsetsZero;
+    if (IS_IOS_7) {
+        self.tableView.separatorInset = UIEdgeInsetsZero;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,7 +70,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        cell.contentView.backgroundColor = isEven ? [SDGConstants alternateBackgroundColor] : [SDGConstants separatorColor];
         cell.detailTextLabel.textColor = [SDGConstants textColor];
         cell.detailTextLabel.font = [UIFont systemFontOfSize:(IS_IPAD ? 22.0 : 12.0)];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -76,7 +77,10 @@
         cell.textLabel.textColor = [SDGConstants textColor];
     }
     SDGCard *card = self.worker.cards[row];
+    cell.contentView.backgroundColor = isEven ? [SDGConstants alternateBackgroundColor] : [SDGConstants separatorColor];
+    cell.detailTextLabel.backgroundColor = cell.contentView.backgroundColor;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%d KH/s  •  HW: %d  •  %d°  •  Fan: %d  •  %d/%d", (int)(card.mhsAverage*1000), card.hardwareErrors, card.temperature, card.fanPercent, card.gpuClock, card.memoryClock];
+    cell.textLabel.backgroundColor = cell.contentView.backgroundColor;
     cell.textLabel.text = [NSString stringWithFormat:@"GPU #%d", card.number];
     return cell;
 }

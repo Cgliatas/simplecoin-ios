@@ -42,14 +42,18 @@
     
     self.title = @"Worker Stats";
     
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@""
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:nil
-                                                                            action:nil];
+    if (IS_IOS_7) {
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                                                 style:UIBarButtonItemStylePlain
+                                                                                target:nil
+                                                                                action:nil];
+    }
     
     self.tableView.backgroundColor = [SDGConstants backgroundColor];
     self.tableView.backgroundView.backgroundColor = [SDGConstants backgroundColor];
-    self.tableView.separatorInset = UIEdgeInsetsZero;
+    if (IS_IOS_7) {
+        self.tableView.separatorInset = UIEdgeInsetsZero;
+    }
     
     [self updateStats];
 }
@@ -91,7 +95,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return IS_IPAD ? 50.0 : 20.0;
+    return IS_IPAD ? 40.0 : 20.0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -123,7 +127,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        cell.contentView.backgroundColor = isEven ? [SDGConstants alternateBackgroundColor] : [SDGConstants separatorColor];
         cell.detailTextLabel.textColor = [SDGConstants textColor];
         cell.detailTextLabel.font = [UIFont systemFontOfSize:(IS_IPAD ? 22.0 : 12.0)];
         cell.imageView.transform = CGAffineTransformMakeScale(0.4, 0.4);
@@ -131,8 +134,11 @@
         cell.textLabel.textColor = [SDGConstants textColor];
     }
     SDGWorker *worker = self.user.workers[row];
+    cell.contentView.backgroundColor = isEven ? [SDGConstants alternateBackgroundColor] : [SDGConstants separatorColor];
+    cell.detailTextLabel.backgroundColor = cell.contentView.backgroundColor;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Hash rate: %.3f MH/s  •  Efficiency: %.2f%%", worker.hashRate, worker.efficiency];
     cell.imageView.image = worker.isOnline ? [UIImage imageNamed:@"online"] : [UIImage imageNamed:@"offline"];
+    cell.textLabel.backgroundColor = cell.contentView.backgroundColor;
     cell.textLabel.text = worker.name;
     return cell;
 }

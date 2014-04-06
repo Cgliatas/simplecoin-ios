@@ -14,6 +14,7 @@
 
 @interface SDGPoolStatsViewController ()
 // Interface
+@property (weak, nonatomic) IBOutlet UIView *hashRateView;
 @property (weak, nonatomic) IBOutlet UILabel *hashRateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *workersLabel;
 @property (weak, nonatomic) IBOutlet UILabel *roundTimeLabel;
@@ -42,6 +43,22 @@
     self.title = @"Pool Stats";
     
     self.navigationItem.rightBarButtonItem = [self refreshBarButtonItem];
+    
+    [self.hashRateView makeConstraints:^(MASConstraintMaker *make) {
+        if (IS_IOS_7) {
+            if (IS_IPAD) {
+                make.top.offset(84.0);
+            } else {
+                make.top.offset(75.0);
+            }
+        } else {
+            if (IS_IPAD) {
+                make.top.offset(20.0);
+            } else {
+                make.top.offset(10.0);
+            }
+        }
+    }];
     
     [self loadPoolStats];
 }
