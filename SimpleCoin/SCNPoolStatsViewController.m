@@ -127,7 +127,7 @@
                           (self.pool.estimatedSecondsRemaining / 3600),
                           abs((self.pool.estimatedSecondsRemaining / 60) % 60),
                           abs(self.pool.estimatedSecondsRemaining % 60)];
-    if ((self.pool.estimatedSecondsRemaining / 3600) == 0) {
+    if (self.pool.estimatedSecondsRemaining < 0) {
         timeLeft = [@"-" stringByAppendingString:timeLeft];
     }
     self.estimatedTimeLeftLabel.text = timeLeft;
