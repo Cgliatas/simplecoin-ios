@@ -12,8 +12,9 @@
 		6621FBDB18D65F8300FE87F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBDA18D65F8300FE87F7 /* CoreGraphics.framework */; };
 		6621FBDD18D65F8300FE87F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBDC18D65F8300FE87F7 /* UIKit.framework */; };
 		668652EF18EBA581008E58F2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668652EE18EBA581008E58F2 /* Crashlytics.framework */; };
+		66A64BF9190769AE00E91B80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E40419075F7E00671B65 /* Images.xcassets */; };
+		66A64BFA19076A0D00E91B80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E40419075F7E00671B65 /* Images.xcassets */; };
 		66E0E42619075F7E00671B65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E40219075F7E00671B65 /* InfoPlist.strings */; };
-		66E0E42719075F7E00671B65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E40419075F7E00671B65 /* Images.xcassets */; };
 		66E0E42819075F7E00671B65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E40519075F7E00671B65 /* main.m */; };
 		66E0E42919075F7E00671B65 /* SCNAddressStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E40719075F7E00671B65 /* SCNAddressStore.m */; };
 		66E0E42A19075F7E00671B65 /* SCNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E40919075F7E00671B65 /* SCNAppDelegate.m */; };
@@ -35,6 +36,33 @@
 		66E0E43A19075F7E00671B65 /* SCNWorkerStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E42219075F7E00671B65 /* SCNWorkerStatsViewController~ipad.xib */; };
 		66E0E43B19075F7E00671B65 /* SCNWorkerStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E42319075F7E00671B65 /* SCNWorkerStatsViewController~iphone.xib */; };
 		66E0E43C19075F7E00671B65 /* SimpleDoge-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E42419075F7E00671B65 /* SimpleDoge-Info.plist */; };
+		66E2AF2919076554005A065B /* SCNPoolStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E41119075F7E00671B65 /* SCNPoolStatsViewController.m */; };
+		66E2AF2A19076554005A065B /* SCNUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E41519075F7E00671B65 /* SCNUser.m */; };
+		66E2AF2B19076554005A065B /* SCNPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E40F19075F7E00671B65 /* SCNPool.m */; };
+		66E2AF2C19076554005A065B /* SCNCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E40B19075F7E00671B65 /* SCNCard.m */; };
+		66E2AF2D19076554005A065B /* SCNWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E41B19075F7E00671B65 /* SCNWorker.m */; };
+		66E2AF2E19076554005A065B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E40519075F7E00671B65 /* main.m */; };
+		66E2AF2F19076554005A065B /* SCNConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E40D19075F7E00671B65 /* SCNConstants.m */; };
+		66E2AF3019076554005A065B /* SCNAddressStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E40719075F7E00671B65 /* SCNAddressStore.m */; };
+		66E2AF3119076554005A065B /* SCNUserStatsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E41719075F7E00671B65 /* SCNUserStatsController.m */; };
+		66E2AF3219076554005A065B /* SCNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E40919075F7E00671B65 /* SCNAppDelegate.m */; };
+		66E2AF3319076554005A065B /* SCNWorkerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E41D19075F7E00671B65 /* SCNWorkerDetailsViewController.m */; };
+		66E2AF3419076554005A065B /* SCNWorkerStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E0E42119075F7E00671B65 /* SCNWorkerStatsViewController.m */; };
+		66E2AF3619076554005A065B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBDA18D65F8300FE87F7 /* CoreGraphics.framework */; };
+		66E2AF3719076554005A065B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668652EE18EBA581008E58F2 /* Crashlytics.framework */; };
+		66E2AF3819076554005A065B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBDC18D65F8300FE87F7 /* UIKit.framework */; };
+		66E2AF3919076554005A065B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBD818D65F8300FE87F7 /* Foundation.framework */; };
+		66E2AF3A19076554005A065B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4368A493A05643FF92D479CB /* libPods.a */; };
+		66E2AF3C19076554005A065B /* SCNWorkerDetailsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E41F19075F7E00671B65 /* SCNWorkerDetailsViewController~iphone.xib */; };
+		66E2AF3D19076554005A065B /* SCNUserStatsController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E41819075F7E00671B65 /* SCNUserStatsController~ipad.xib */; };
+		66E2AF3E19076554005A065B /* SCNWorkerDetailsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E41E19075F7E00671B65 /* SCNWorkerDetailsViewController~ipad.xib */; };
+		66E2AF3F19076554005A065B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E40219075F7E00671B65 /* InfoPlist.strings */; };
+		66E2AF4019076554005A065B /* SCNPoolStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E41319075F7E00671B65 /* SCNPoolStatsViewController~iphone.xib */; };
+		66E2AF4119076554005A065B /* SCNWorkerStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E42219075F7E00671B65 /* SCNWorkerStatsViewController~ipad.xib */; };
+		66E2AF4319076554005A065B /* SimpleDoge-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E42419075F7E00671B65 /* SimpleDoge-Info.plist */; };
+		66E2AF4419076554005A065B /* SCNWorkerStatsViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E42319075F7E00671B65 /* SCNWorkerStatsViewController~iphone.xib */; };
+		66E2AF4519076554005A065B /* SCNPoolStatsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E41219075F7E00671B65 /* SCNPoolStatsViewController~ipad.xib */; };
+		66E2AF4619076554005A065B /* SCNUserStatsController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E41919075F7E00671B65 /* SCNUserStatsController~iphone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +109,8 @@
 		66E0E42319075F7E00671B65 /* SCNWorkerStatsViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SCNWorkerStatsViewController~iphone.xib"; sourceTree = "<group>"; };
 		66E0E42419075F7E00671B65 /* SimpleDoge-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SimpleDoge-Info.plist"; sourceTree = "<group>"; };
 		66E0E42519075F7E00671B65 /* SimpleCoin-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleCoin-Prefix.pch"; sourceTree = "<group>"; };
+		66E2AF4D19076554005A065B /* SimpleVert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleVert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66E2AF4E19076554005A065B /* SimpleVert-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleVert-Info.plist"; path = "/Users/adam/Development/GitHub/simplecrypto/simpledoge-ios/SimpleVert-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +123,18 @@
 				6621FBDD18D65F8300FE87F7 /* UIKit.framework in Frameworks */,
 				6621FBD918D65F8300FE87F7 /* Foundation.framework in Frameworks */,
 				5515BB92AD5548C4941DB23D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E2AF3519076554005A065B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E2AF3619076554005A065B /* CoreGraphics.framework in Frameworks */,
+				66E2AF3719076554005A065B /* Crashlytics.framework in Frameworks */,
+				66E2AF3819076554005A065B /* UIKit.framework in Frameworks */,
+				66E2AF3919076554005A065B /* Foundation.framework in Frameworks */,
+				66E2AF3A19076554005A065B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				6621FBD518D65F8300FE87F7 /* SimpleDoge.app */,
+				66E2AF4D19076554005A065B /* SimpleVert.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +211,7 @@
 				66E0E42319075F7E00671B65 /* SCNWorkerStatsViewController~iphone.xib */,
 				66E0E42519075F7E00671B65 /* SimpleCoin-Prefix.pch */,
 				66E0E42419075F7E00671B65 /* SimpleDoge-Info.plist */,
+				66E2AF4E19076554005A065B /* SimpleVert-Info.plist */,
 			);
 			path = SimpleCoin;
 			sourceTree = "<group>";
@@ -195,6 +239,26 @@
 			productReference = 6621FBD518D65F8300FE87F7 /* SimpleDoge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		66E2AF2619076554005A065B /* SimpleVert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66E2AF4919076554005A065B /* Build configuration list for PBXNativeTarget "SimpleVert" */;
+			buildPhases = (
+				66E2AF2719076554005A065B /* Check Pods Manifest.lock */,
+				66E2AF2819076554005A065B /* Sources */,
+				66E2AF3519076554005A065B /* Frameworks */,
+				66E2AF3B19076554005A065B /* Resources */,
+				66E2AF4719076554005A065B /* Copy Pods Resources */,
+				66E2AF4819076554005A065B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleVert;
+			productName = SimpleDoge;
+			productReference = 66E2AF4D19076554005A065B /* SimpleVert.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +270,9 @@
 				ORGANIZATIONNAME = "Adam McDonald";
 				TargetAttributes = {
 					6621FBD418D65F8300FE87F7 = {
+						DevelopmentTeam = YX7CTSJGGE;
+					};
+					66E2AF2619076554005A065B = {
 						DevelopmentTeam = YX7CTSJGGE;
 					};
 				};
@@ -223,6 +290,7 @@
 			projectRoot = "";
 			targets = (
 				6621FBD418D65F8300FE87F7 /* SimpleDoge */,
+				66E2AF2619076554005A065B /* SimpleVert */,
 			);
 		};
 /* End PBXProject section */
@@ -236,9 +304,9 @@
 				66E0E43319075F7E00671B65 /* SCNUserStatsController~ipad.xib in Resources */,
 				66E0E43719075F7E00671B65 /* SCNWorkerDetailsViewController~ipad.xib in Resources */,
 				66E0E42619075F7E00671B65 /* InfoPlist.strings in Resources */,
+				66A64BFA19076A0D00E91B80 /* Images.xcassets in Resources */,
 				66E0E43019075F7E00671B65 /* SCNPoolStatsViewController~iphone.xib in Resources */,
 				66E0E43A19075F7E00671B65 /* SCNWorkerStatsViewController~ipad.xib in Resources */,
-				66E0E42719075F7E00671B65 /* Images.xcassets in Resources */,
 				66E0E43C19075F7E00671B65 /* SimpleDoge-Info.plist in Resources */,
 				66E0E43B19075F7E00671B65 /* SCNWorkerStatsViewController~iphone.xib in Resources */,
 				66E0E42F19075F7E00671B65 /* SCNPoolStatsViewController~ipad.xib in Resources */,
@@ -246,10 +314,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		66E2AF3B19076554005A065B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E2AF3C19076554005A065B /* SCNWorkerDetailsViewController~iphone.xib in Resources */,
+				66E2AF3D19076554005A065B /* SCNUserStatsController~ipad.xib in Resources */,
+				66E2AF3E19076554005A065B /* SCNWorkerDetailsViewController~ipad.xib in Resources */,
+				66E2AF3F19076554005A065B /* InfoPlist.strings in Resources */,
+				66A64BF9190769AE00E91B80 /* Images.xcassets in Resources */,
+				66E2AF4019076554005A065B /* SCNPoolStatsViewController~iphone.xib in Resources */,
+				66E2AF4119076554005A065B /* SCNWorkerStatsViewController~ipad.xib in Resources */,
+				66E2AF4319076554005A065B /* SimpleDoge-Info.plist in Resources */,
+				66E2AF4419076554005A065B /* SCNWorkerStatsViewController~iphone.xib in Resources */,
+				66E2AF4519076554005A065B /* SCNPoolStatsViewController~ipad.xib in Resources */,
+				66E2AF4619076554005A065B /* SCNUserStatsController~iphone.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		668652ED18EBA55A008E58F2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run e53ebf0af440d99cb7ed424150ba614906dd1871 6baa7ae5ec7eeea3dbf661a8adecc8fc07b19986be30a2888524d5bee4a22e8d";
+		};
+		66E2AF2719076554005A065B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66E2AF4719076554005A065B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66E2AF4819076554005A065B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -311,6 +440,25 @@
 				66E0E42A19075F7E00671B65 /* SCNAppDelegate.m in Sources */,
 				66E0E43619075F7E00671B65 /* SCNWorkerDetailsViewController.m in Sources */,
 				66E0E43919075F7E00671B65 /* SCNWorkerStatsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E2AF2819076554005A065B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E2AF2919076554005A065B /* SCNPoolStatsViewController.m in Sources */,
+				66E2AF2A19076554005A065B /* SCNUser.m in Sources */,
+				66E2AF2B19076554005A065B /* SCNPool.m in Sources */,
+				66E2AF2C19076554005A065B /* SCNCard.m in Sources */,
+				66E2AF2D19076554005A065B /* SCNWorker.m in Sources */,
+				66E2AF2E19076554005A065B /* main.m in Sources */,
+				66E2AF2F19076554005A065B /* SCNConstants.m in Sources */,
+				66E2AF3019076554005A065B /* SCNAddressStore.m in Sources */,
+				66E2AF3119076554005A065B /* SCNUserStatsController.m in Sources */,
+				66E2AF3219076554005A065B /* SCNAppDelegate.m in Sources */,
+				66E2AF3319076554005A065B /* SCNWorkerDetailsViewController.m in Sources */,
+				66E2AF3419076554005A065B /* SCNWorkerStatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +561,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleCoin/SimpleCoin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"SIMPLEDOGE=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/SimpleCoin/SimpleDoge-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -432,6 +585,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleCoin/SimpleCoin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"SIMPLEDOGE=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/SimpleCoin/SimpleDoge-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "C2B8A0CF-7157-46E8-B72E-85D9648DE694";
@@ -485,8 +643,87 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleCoin/SimpleCoin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"SIMPLEDOGE=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/SimpleCoin/SimpleDoge-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B4F216C5-7198-491A-ADCA-4F81583C56D0";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad Hoc";
+		};
+		66E2AF4A19076554005A065B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3795661BC59443FC93F0CF89 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-SV";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleCoin/SimpleCoin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"SIMPLEVERT=1",
+				);
+				INFOPLIST_FILE = "SimpleVert-Info.plist";
+				PRODUCT_NAME = SimpleVert;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		66E2AF4B19076554005A065B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3795661BC59443FC93F0CF89 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-SV";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleCoin/SimpleCoin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"SIMPLEVERT=1",
+				);
+				INFOPLIST_FILE = "SimpleVert-Info.plist";
+				PRODUCT_NAME = SimpleVert;
+				PROVISIONING_PROFILE = "C2B8A0CF-7157-46E8-B72E-85D9648DE694";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		66E2AF4C19076554005A065B /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3795661BC59443FC93F0CF89 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-SV";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleCoin/SimpleCoin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"SIMPLEVERT=1",
+				);
+				INFOPLIST_FILE = "SimpleVert-Info.plist";
+				PRODUCT_NAME = SimpleVert;
 				PROVISIONING_PROFILE = "B4F216C5-7198-491A-ADCA-4F81583C56D0";
 				WRAPPER_EXTENSION = app;
 			};
@@ -511,6 +748,16 @@
 				6621FC0218D65F8300FE87F7 /* Debug */,
 				6621FC0318D65F8300FE87F7 /* Release */,
 				662561A318E3C62C005D0699 /* Ad Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66E2AF4919076554005A065B /* Build configuration list for PBXNativeTarget "SimpleVert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66E2AF4A19076554005A065B /* Debug */,
+				66E2AF4B19076554005A065B /* Release */,
+				66E2AF4C19076554005A065B /* Ad Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCNWorkerStatsViewController">
             <connections>
                 <outlet property="averageHashRateLabel" destination="Poc-Hl-Luo" id="U6S-jF-tyA"/>
+                <outlet property="estimatedDailyPayoutHeaderLabel" destination="b41-Gw-T13" id="xNM-q8-pHk"/>
                 <outlet property="estimatedDogeDayLabel" destination="cgw-kP-fRB" id="E7P-ix-0E2"/>
                 <outlet property="estimatedRoundPayoutLabel" destination="zBd-7X-ve8" id="vrG-7x-1mD"/>
                 <outlet property="roundSharesLabel" destination="DcS-17-YLc" id="HeS-Mk-R0M"/>

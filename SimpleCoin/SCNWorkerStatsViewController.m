@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *roundSharesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *estimatedRoundPayoutLabel;
+@property (weak, nonatomic) IBOutlet UILabel *estimatedDailyPayoutHeaderLabel;
 @property (weak, nonatomic) IBOutlet UILabel *estimatedDogeDayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *averageHashRateLabel;
 
@@ -49,6 +50,12 @@
                                                                                 action:nil];
     }
     
+#if SIMPLEDOGE
+    self.estimatedDailyPayoutHeaderLabel.text = @"Est. Doge/day";
+#else
+    self.estimatedDailyPayoutHeaderLabel.text = @"Est. Vert/day";
+#endif
+    
     self.tableView.backgroundColor = [SCNConstants backgroundColor];
     self.tableView.backgroundView.backgroundColor = [SCNConstants backgroundColor];
     if (IS_IOS_7) {
@@ -68,6 +75,12 @@
 
 - (void)updateStats
 {
+#ifdef SIMPLEDOGE
+    NSString *symbol = @"Ð";
+#else
+    NSString *symbol = @"ᗐ";
+#endif
+    
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
     [numberFormatter setMaximumFractionDigits:3];
@@ -76,10 +89,10 @@
     self.averageHashRateLabel.text = [NSString stringWithFormat:@"%.3f MH/s", self.user.hashRate];
     
     NSString *roundPayout = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:self.user.estimatedRoundPayout]];
-    self.estimatedRoundPayoutLabel.text = [NSString stringWithFormat:@"%@ Ð", roundPayout];
+    self.estimatedRoundPayoutLabel.text = [NSString stringWithFormat:@"%@ %@", roundPayout, symbol];
     
     NSString *dogeDay = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:self.user.dailyEstimate]];
-    self.estimatedDogeDayLabel.text = [NSString stringWithFormat:@"%@ Ð", dogeDay];
+    self.estimatedDogeDayLabel.text = [NSString stringWithFormat:@"%@ %@", dogeDay, symbol];
 }
 
 #pragma mark - UIAlertViewDelegate

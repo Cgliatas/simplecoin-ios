@@ -49,6 +49,12 @@
     
     self.title = @"User Stats";
     
+#if SIMPLEDOGE
+    self.addressTextField.placeholder = @"Paste your Doge address for stats";
+#else
+    self.addressTextField.placeholder = @"Paste your Vert address for stats";
+#endif
+    
     self.tableView.backgroundColor = [SCNConstants backgroundColor];
     self.tableView.backgroundView.backgroundColor = [SCNConstants backgroundColor];
     if (IS_IOS_7) {
@@ -107,9 +113,15 @@
 
 - (void)fetchStatsForAddress:(NSString *)address
 {
+#ifdef SIMPLEDOGE
+    NSString *url = [NSString stringWithFormat:@"http://simpledoge.com/api/%@", address];
+#else
+    NSString *url = [NSString stringWithFormat:@"http://simplevert.com/api/%@", address];
+#endif
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    [manager GET:[NSString stringWithFormat:@"http://simpledoge.com/api/%@", address]
+    [manager GET:url
       parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              NSDictionary *response = (NSDictionary *)responseObject;

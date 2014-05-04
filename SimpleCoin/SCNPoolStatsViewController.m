@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *roundTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *estimatedTimeLeftLabel;
 @property (weak, nonatomic) IBOutlet UILabel *roundLuckLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 // Data
 @property (strong, nonatomic) SCNPool *pool;
@@ -41,6 +42,14 @@
     [super viewDidLoad];
     
     self.title = @"Pool Stats";
+    
+#ifdef SIMPLEDOGE
+    self.navigationItem.title = @"Simple Doge";
+    self.imageView.hidden = NO;
+#else
+    self.navigationItem.title = @"Simple Vert";
+    self.imageView.hidden = YES;
+#endif
     
     self.navigationItem.rightBarButtonItem = [self refreshBarButtonItem];
     
@@ -81,9 +90,15 @@
 
 - (void)loadPoolStats
 {
+#ifdef SIMPLEDOGE
+    NSString *url = @"http://simpledoge.com/api/pool_stats";
+#else
+    NSString *url = @"http://simplevert.com/api/pool_stats";
+#endif
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    [manager GET:@"http://simpledoge.com/api/pool_stats"
+    [manager GET:url
       parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              NSDictionary *response = (NSDictionary *)responseObject;
