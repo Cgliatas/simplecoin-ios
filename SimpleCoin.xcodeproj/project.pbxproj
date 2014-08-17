@@ -11,6 +11,7 @@
 		6621FBD918D65F8300FE87F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBD818D65F8300FE87F7 /* Foundation.framework */; };
 		6621FBDB18D65F8300FE87F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBDA18D65F8300FE87F7 /* CoreGraphics.framework */; };
 		6621FBDD18D65F8300FE87F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6621FBDC18D65F8300FE87F7 /* UIKit.framework */; };
+		663BF53A19A163B9002B464B /* SimpleVert-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 663BF53919A163B9002B464B /* SimpleVert-Info.plist */; };
 		668652EF18EBA581008E58F2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668652EE18EBA581008E58F2 /* Crashlytics.framework */; };
 		66A64BF9190769AE00E91B80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E40419075F7E00671B65 /* Images.xcassets */; };
 		66A64BFA19076A0D00E91B80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E0E40419075F7E00671B65 /* Images.xcassets */; };
@@ -73,6 +74,7 @@
 		6621FBDA18D65F8300FE87F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6621FBDC18D65F8300FE87F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6621FBF118D65F8300FE87F7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		663BF53919A163B9002B464B /* SimpleVert-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SimpleVert-Info.plist"; sourceTree = "<group>"; };
 		668652EE18EBA581008E58F2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		66E0E40319075F7E00671B65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		66E0E40419075F7E00671B65 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -110,7 +112,6 @@
 		66E0E42419075F7E00671B65 /* SimpleDoge-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SimpleDoge-Info.plist"; sourceTree = "<group>"; };
 		66E0E42519075F7E00671B65 /* SimpleCoin-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleCoin-Prefix.pch"; sourceTree = "<group>"; };
 		66E2AF4D19076554005A065B /* SimpleVert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleVert.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		66E2AF4E19076554005A065B /* SimpleVert-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SimpleVert-Info.plist"; path = "/Users/adam/Development/GitHub/simplecrypto/simpledoge-ios/SimpleVert-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +212,7 @@
 				66E0E42319075F7E00671B65 /* SCNWorkerStatsViewController~iphone.xib */,
 				66E0E42519075F7E00671B65 /* SimpleCoin-Prefix.pch */,
 				66E0E42419075F7E00671B65 /* SimpleDoge-Info.plist */,
-				66E2AF4E19076554005A065B /* SimpleVert-Info.plist */,
+				663BF53919A163B9002B464B /* SimpleVert-Info.plist */,
 			);
 			path = SimpleCoin;
 			sourceTree = "<group>";
@@ -321,6 +322,7 @@
 				66E2AF3C19076554005A065B /* SCNWorkerDetailsViewController~iphone.xib in Resources */,
 				66E2AF3D19076554005A065B /* SCNUserStatsController~ipad.xib in Resources */,
 				66E2AF3E19076554005A065B /* SCNWorkerDetailsViewController~ipad.xib in Resources */,
+				663BF53A19A163B9002B464B /* SimpleVert-Info.plist in Resources */,
 				66E2AF3F19076554005A065B /* InfoPlist.strings in Resources */,
 				66A64BF9190769AE00E91B80 /* Images.xcassets in Resources */,
 				66E2AF4019076554005A065B /* SCNPoolStatsViewController~iphone.xib in Resources */,
