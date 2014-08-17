@@ -10,6 +10,7 @@
 
 #define kSDGAddresses @"kSDGAddresses"
 #define kPowerpoolAgentURL @"https://github.com/simplecrypto/ppagent"
+#define kCrashlyticsAPIKey @""
 
 @interface SCNConstants : NSObject
 + (UIColor *)backgroundColor;
