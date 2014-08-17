@@ -20,7 +20,9 @@
         self.memoryClock = [dictionary[@"Memory Clock"] integerValue];
         self.mhsAverage = [dictionary[@"MHS av"] floatValue];
         self.number = [dictionary[@"GPU"] integerValue];
-        self.temperature = [dictionary[@"temp"] integerValue];
+        if (! [dictionary[@"temp"] isKindOfClass:[NSNull class]]) {
+            self.temperature = [dictionary[@"temp"] integerValue];
+        }
         self.status = dictionary[@"Status"];
     }
     return self;
