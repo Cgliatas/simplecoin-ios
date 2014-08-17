@@ -675,7 +675,7 @@
 					"COCOAPODS=1",
 					"SIMPLEVERT=1",
 				);
-				INFOPLIST_FILE = "SimpleVert-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SimpleCoin/SimpleVert-Info.plist";
 				PRODUCT_NAME = SimpleVert;
 				WRAPPER_EXTENSION = app;
 			};
@@ -699,7 +699,7 @@
 					"COCOAPODS=1",
 					"SIMPLEVERT=1",
 				);
-				INFOPLIST_FILE = "SimpleVert-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SimpleCoin/SimpleVert-Info.plist";
 				PRODUCT_NAME = SimpleVert;
 				PROVISIONING_PROFILE = "714C66A8-8254-4659-8A11-207C70BE42C1";
 				WRAPPER_EXTENSION = app;
@@ -724,7 +724,7 @@
 					"COCOAPODS=1",
 					"SIMPLEVERT=1",
 				);
-				INFOPLIST_FILE = "SimpleVert-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SimpleCoin/SimpleVert-Info.plist";
 				PRODUCT_NAME = SimpleVert;
 				PROVISIONING_PROFILE = "BFCFE2F3-C696-4F90-AC61-6CABD3030F24";
 				WRAPPER_EXTENSION = app;
