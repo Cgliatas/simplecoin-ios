@@ -18,7 +18,9 @@
     if (self) {
         self.accepted = [dictionary[@"accepted"] integerValue];
         self.hashRate = [dictionary[@"last_10_hashrate"] floatValue];
-        self.efficiency = [dictionary[@"efficiency"] floatValue];
+        if (! [dictionary[@"efficiency"] isKindOfClass:[NSNull class]]) {
+            self.efficiency = [dictionary[@"efficiency"] floatValue];
+        }
         self.name = dictionary[@"name"];
         if (self.name == nil || [self.name isEqualToString:@""]) {
             self.name = @"[unnamed]";
