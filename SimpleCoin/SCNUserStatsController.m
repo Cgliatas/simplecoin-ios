@@ -90,6 +90,9 @@
     // Validate address
     if (address == nil || [address length] == 0) return;
     
+    // Trim whitespace
+    address = [address stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
     // Store address
     [SCNAddressStore save:address];
     
