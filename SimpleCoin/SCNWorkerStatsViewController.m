@@ -1,6 +1,6 @@
 //
 //  SDGWorkerStatsViewController.m
-//  SimpleDoge
+//  SimpleCoin
 //
 //  Created by Adam McDonald on 3/19/14.
 //  Copyright (c) 2014 Adam McDonald. All rights reserved.
